@@ -50,5 +50,5 @@ deserialized_df = df.selectExpr("CAST(value AS STRING)")
 
 # Query Kafka and wait 10sec before stopping pyspark
 query = deserialized_df.writeStream.outputMode("append").format("console").start()
-time.sleep(10)
+time.sleep(12)
 query.stop()
